@@ -12,7 +12,7 @@ fun main(){
     var age = readln().toInt()
     if (age<7)
         println("you are still young to pray .")
-    else if(age<10)
+    else if(age in 8..10)
         println("you should pray")
     else
         println("you must pray ")
