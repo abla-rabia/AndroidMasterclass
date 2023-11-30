@@ -4,20 +4,20 @@ fun main(){
     var ok="1"
     while (ok=="1") {
         println("Enter your choice : ")
-        var playerChoice = readln()
+        var playerChoice = readln().lowercase()
         var randomNumper = (1..3).random()
         var computerChoice = ""
         when {
-            randomNumper == 1 -> computerChoice = "Rock"
-            randomNumper == 2 -> computerChoice = "Paper"
-            randomNumper == 3 -> computerChoice = "Scissors"
+            randomNumper == 1 -> computerChoice = "rock"
+            randomNumper == 2 -> computerChoice = "paper"
+            randomNumper == 3 -> computerChoice = "scissors"
         }
         println("Computer choice : $computerChoice")
         var winner = when {
             computerChoice == playerChoice -> "Tie"
-            computerChoice == "Rock" && playerChoice == "Scissors" -> "Computer"
-            computerChoice == "Scissors" && playerChoice == "Paper" -> "Computer"
-            computerChoice == "Paper" && playerChoice == "Rock" -> "Computer"
+            computerChoice == "rock" && playerChoice == "Scissors" -> "Computer"
+            computerChoice == "scissors" && playerChoice == "Paper" -> "Computer"
+            computerChoice == "paper" && playerChoice == "Rock" -> "Computer"
             else -> "Player"
         }
         println("winner : $winner")
